@@ -1,50 +1,27 @@
-# React + TypeScript + Vite
+# CRUD Starter Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![image](https://github.com/olinations/crud-starter-frontend/blob/master/template.png)
 
-Currently, two official plugins are available:
+This is the React frontend that goes with the [CRUD Starter API backend](https://github.com/olinations/crud-starter-api). It can, however, be used as a starter for any app that features get, post, put and delete requests.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+It uses Bootstrap styles and reactstrap, which creates Bootstrap components, to create a responsive data table that displays all data from a table in a database. It has a modal form for adding and editing items, a delete and edit button in each item row, and a button to download the entire database table into a CSV file.
 
-## Expanding the ESLint configuration
+It uses react-csv to create the CSV download button.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Instructions
 
-- Configure the top-level `parserOptions` property like this:
+**1. Clone this repo**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+git clone https://github.com/olinations/crud-starter-frontend.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+**2. NPM install React and dependencies**
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
 ```
+npm install
+```
+
+## Notes
+
+For full details on every piece of code in this CRUD Starter Frontend visit the companion [Medium article here](https://medium.com/@olinations/build-a-crud-template-using-react-bootstrap-express-postgres-9f84cc444438?source=friends_link&sk=51028bf98ff92bc659d3edbb539a82bb).
